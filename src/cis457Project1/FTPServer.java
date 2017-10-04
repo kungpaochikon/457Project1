@@ -15,8 +15,7 @@ class FTPServer {
 	ServerSocket welcomeSocket = new ServerSocket(12000);
 	String frstln;
 	  
-	while(true)
-	{
+	while(true) {
 		Socket connectionSocket = welcomeSocket.accept();
 		      
 		DataOutputStream  outToClient = 
@@ -33,22 +32,22 @@ class FTPServer {
 		port = Integer.parseInt(frstln);
 		clientCommand = tokens.nextToken();
 			          
-		  if(clientCommand.equals("list:")){ 
-		      Socket dataSocket = new Socket(connectionSocket.getInetAddress                                                    (), port);
-		      DataOutputStream  dataOutToClient = 
-		      new DataOutputStream(dataSocket.getOutputStream());
-		      ..........................
-		  }
+		if(clientCommand.equals("list:")) { 
+		    Socket dataSocket = new Socket(connectionSocket.getInetAddress                                                    (), port);
+		    DataOutputStream  dataOutToClient = 
+		    new DataOutputStream(dataSocket.getOutputStream());
+		    ..........................
+		}
 		
-		  dataSocket.close();
-		  System.out.println("Data Socket closed");
-	 }
+		dataSocket.close();
+		System.out.println("Data Socket closed");
+	}
 	
 	......................
 	 
 	
-	if(clientCommand.equals("retr:")){
+	if(clientCommand.equals("retr:")) {
 	    ..............................
 		..............................
-	 }
+	}
 }
