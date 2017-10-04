@@ -1,7 +1,5 @@
 package cis457Project1;
 
-//Did this work?
-
 import java.io.*; 
 import java.net.*;
 import java.util.*;
