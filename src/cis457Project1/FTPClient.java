@@ -1,3 +1,5 @@
+package cis457Project1;
+
 import java.io.*; 
 import java.net.*;
 import java.util.*;
@@ -5,7 +7,6 @@ import java.text.*;
 import java.lang.*;
 import javax.swing.*;
 class FTPClient { 
-
     public static void main(String argv[]) throws Exception { 
     String sentence; 
     String modifiedSentence; 
