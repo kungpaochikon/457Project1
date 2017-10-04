@@ -8,6 +8,9 @@ import java.util.*;
 
 
 class FTPServer { 
+
+public static void main(String args[]) throws Exception{
+
 	String fromClient;
 	String clientCommand;
 	byte[] data;
@@ -50,4 +53,5 @@ class FTPServer {
 	    //..............................
 		//..............................
 	}
+}
 }
