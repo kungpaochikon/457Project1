@@ -6,28 +6,27 @@ import java.lang.*;
 import javax.swing.*;
 class FTPClient { 
 
-    public static void main(String argv[]) throws Exception 
-    { 
-        String sentence; 
-        String modifiedSentence; 
-        boolean isOpen = true;
-        int number=1;
-        boolean notEnd = true;
+    public static void main(String argv[]) throws Exception { 
+    String sentence; 
+    String modifiedSentence; 
+    boolean isOpen = true;
+    int number=1;
+    boolean notEnd = true;
 	String statusCode;
 	boolean clientgo = true;
 	    
 	
 	BufferedReader inFromUser = 
-        new BufferedReader(new InputStreamReader(System.in)); 
-        sentence = inFromUser.readLine();
-        StringTokenizer tokens = new StringTokenizer(sentence);
+    new BufferedReader(new InputStreamReader(System.in)); 
+    sentence = inFromUser.readLine();
+    StringTokenizer tokens = new StringTokenizer(sentence);
 
 
 	if(sentence.startsWith("connect")){
 	String serverName = tokens.nextToken(); // pass the connect command
 	serverName = tokens.nextToken();
 	port1 = Integer.parseInt(tokens.nextToken());
-        System.out.println("You are connected to " + serverName);
+    System.out.println("You are connected to " + serverName);
         
 	Socket ControlSocket= new Socket(serverName, port1);
         
@@ -55,7 +54,7 @@ class FTPClient {
             {
                 modifiedSentence = inData.readUTF();
                ........................................
-	       ........................................
+               ........................................
             }
 	
 
