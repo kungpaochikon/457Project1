@@ -9,6 +9,8 @@ import java.text.*;
 import java.lang.*;
 import javax.swing.*;
 class FTPClient { 
+
+	
     public static void main(String argv[]) throws Exception { 
     String sentence; 
     String modifiedSentence; 
@@ -34,39 +36,37 @@ class FTPClient {
 	Socket ControlSocket= new Socket(serverName, port1);
         
 	while(isOpen && clientgo)
-        {      
-	      
-          DataOutputStream outToServer = 
-          new DataOutputStream(ControlSocket.getOutputStream()); 
-          
-	  DataInputStream inFromServer = new DataInputStream(new BufferedInputStream(ControlSocket.getInputStream()));
-          
-    	  sentence = inFromUser.readLine();
-	   
+   	{      
+    	DataOutputStream outToServer = 
+      	new DataOutputStream(ControlSocket.getOutputStream()); 
+      
+      	DataInputStream inFromServer = new DataInputStream(new BufferedInputStream
+      	(ControlSocket.getInputStream()));
+      
+	  	sentence = inFromUser.readLine();
+   
         if(sentence.equals("list:"))
         {
             
-	    port = port +2;
-	    System.out.println(port);
-	    ServerSocket welcomeData = new ServerSocket(port);
-    	    outToServer.writeBytes (port + " " + sentence + " " + '\n');
+		    port = port +2;
+		    System.out.println(port);
+		    ServerSocket welcomeData = new ServerSocket(port);
+	    	outToServer.writeBytes (port + " " + sentence + " " + '\n');
 
-	    Socket dataSocket =welcomeData.accept(); 
- 	    DataInputStream inData = new DataInputStream(new BufferedInputStream(dataSocket.getInputStream()));
+		    Socket dataSocket =welcomeData.accept(); 
+	 	    DataInputStream inData = new DataInputStream(new BufferedInputStream(dataSocket.getInputStream()));
             while(notEnd) 
             {
                 modifiedSentence = inData.readUTF();
                ........................................
                ........................................
             }
-	
-
-	 welcomeData.close();
-	 dataSocket.close();
-	 System.out.println("\nWhat would you like to do next: \n retr: file.txt ||  				stor: file.txt  || close");
+			welcomeData.close();
+			dataSocket.close();
+			System.out.println("\nWhat would you like to do next: \n retr: file.txt ||  				stor: file.txt  || close");
 
         }
-         else if(sentence.startsWith("retr: "){
+        else if(sentence.startsWith("retr: "){
         	 ....................................................
         }
-}
+	}
