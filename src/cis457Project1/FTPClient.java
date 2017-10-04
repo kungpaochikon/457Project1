@@ -50,7 +50,7 @@ class FTPClient {
     	    outToServer.writeBytes (port + " " + sentence + " " + '\n');
 
 	    Socket dataSocket =welcomeData.accept(); 
- 	    DataInputStream inData = new DataInputStream(new BufferedInputStream 					(dataSocket.getInputStream()));
+ 	    DataInputStream inData = new DataInputStream(new BufferedInputStream(dataSocket.getInputStream()));
             while(notEnd) 
             {
                 modifiedSentence = inData.readUTF();
