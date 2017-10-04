@@ -53,8 +53,8 @@ class FTPClient {
 		 	    DataInputStream inData = new DataInputStream(new BufferedInputStream(dataSocket.getInputStream()));
 	            while(notEnd) {
 	                modifiedSentence = inData.readUTF();
-	               ........................................
-	               ........................................
+	               //........................................
+	               //........................................
 	            }
 				welcomeData.close();
 				dataSocket.close();
@@ -62,7 +62,7 @@ class FTPClient {
 
 	        }
 	        else if(sentence.startsWith("retr: ") {
-	        	 ....................................................
+	        	 //....................................................
 	        }
 		}
 	}
