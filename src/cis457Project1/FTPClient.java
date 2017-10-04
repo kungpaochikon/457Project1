@@ -61,7 +61,7 @@ class FTPClient {
 				System.out.println("\nWhat would you like to do next: \n retr: file.txt ||  				stor: file.txt  || close");
 
 	        }
-	        else if(sentence.startsWith("retr: "){
+	        else if(sentence.startsWith("retr: ") {
 	        	 ....................................................
 	        }
 		}
