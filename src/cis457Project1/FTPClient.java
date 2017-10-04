@@ -1,5 +1,7 @@
 package cis457Project1;
 
+//Did this work?
+
 import java.io.*; 
 import java.net.*;
 import java.util.*;
@@ -37,7 +39,7 @@ class FTPClient {
           DataOutputStream outToServer = 
           new DataOutputStream(ControlSocket.getOutputStream()); 
           
-	  DataInputStream inFromServer = new DataInputStream(new BufferedInputStream             (ControlSocket.getInputStream()));
+	  DataInputStream inFromServer = new DataInputStream(new BufferedInputStream(ControlSocket.getInputStream()));
           
     	  sentence = inFromUser.readLine();
 	   
