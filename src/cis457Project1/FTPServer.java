@@ -8,6 +8,9 @@ import java.util.*;
 
 
 class FTPServer { 
+
+public static void main(String args[]) throws Exception{
+
 	String fromClient;
 	String clientCommand;
 	byte[] data;
@@ -29,7 +32,7 @@ class FTPServer {
 		StringTokenizer tokens = new StringTokenizer(fromClient);
 		
 		frstln = tokens.nextToken();
-		port = Integer.parseInt(frstln);
+		int port = Integer.parseInt(frstln);
 		clientCommand = tokens.nextToken();
 			          
 		if(clientCommand.equals("list:")) { 
@@ -37,17 +40,21 @@ class FTPServer {
 		    DataOutputStream  dataOutToClient = 
 		    new DataOutputStream(dataSocket.getOutputStream());
 		    //..........................
+			
+			dataSocket.close();
+			System.out.println("Data Socket closed");
 		}
 		
-		dataSocket.close();
-		System.out.println("Data Socket closed");
+		if(clientCommand.equals("retr:")) {
+	    //..............................
+		//..............................
+		}
+		
 	}
 	
 	//......................
 	 
 	
-	if(clientCommand.equals("retr:")) {
-	    //..............................
-		//..............................
-	}
+	
+}
 }
