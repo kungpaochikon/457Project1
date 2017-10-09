@@ -58,22 +58,17 @@ class FTPClient {
 					}
 					welcomeData.close();
 					dataSocket.close();
-					System.out.println("\nWhat would you like to do next: \n retr: file.txt ||  				stor: file.txt  || close");
-
-<<<<<<< HEAD
+					System.out.println("\nWhat would you like to do next: \n retr: file.txt || stor: file.txt  || close");
 	        }
 	        else if(sentence.startsWith("retr: ") {
 	        	//....................................................
 	        	//....................................................
 	        }
-=======
 				}
 				else if(sentence.startsWith("retr: ")) {
 					 //....................................................
 					//....................................................
 				}
 			}
->>>>>>> 47d0cfbecfdbe034f1666f13f7448d73f2f49ac3
 		}
 	}
-}
